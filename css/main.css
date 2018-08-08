@@ -128,7 +128,7 @@ body {
 }
 
 .button:hover {
-  background-color: #FFD52A;
+  /* background-color: #FFD52A; */
   transform: translateY(-2px);
   -webkit-box-shadow: 0px 3px 0px 0.05px #0063FF;
 }
@@ -291,7 +291,7 @@ body {
     align-items:center;
     justify-content:flex-start;
   }
-  
+
   .button:hover {
     transform: translateY(-2px);
     -webkit-box-shadow: 0px 3px 0px 0.05px #0063FF;
