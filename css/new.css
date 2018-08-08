@@ -219,6 +219,22 @@ body {
 .nowTranslating:focus {
   outline:0;
 }
+#site-link-div {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top:30px
+}
+
+#site-link {
+  text-align:center !important;
+  color: white;
+}
+
+
+
 
 
 /* MEDIA QUERIES */
