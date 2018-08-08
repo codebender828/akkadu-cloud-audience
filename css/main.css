@@ -1,0 +1,279 @@
+body {
+  background: #262626 !important;
+  font-family: 'Nunito', sans-serif !important ;
+}
+
+.bg-content::before {
+  content:"";
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:-2;
+
+  display: block;
+  background: url('../images/for-blur.png') no-repeat center;
+  width: 100%;
+  height:100%;
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.bg-content {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  z-index:-3;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.blanket {
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  content:"";
+  position: fixed;
+  top:0;
+  left:0;
+  z-index:-2;
+
+  display: block;
+  width: 100%;
+  height:100%;
+}
+
+#bed {
+  background-color: rgba(0, 0, 0, .5);
+  z-index:999;
+}
+
+#logo {
+  position: absolute;
+  width:125px;
+  top:30px;
+  left: 70px;
+  display:inline-block;
+}
+
+#tag {
+  color: #ffffff;
+  position: absolute;
+  top: 30px;
+  right: 70px;
+  display:inline-block;
+}
+
+.stage {
+  margin-top: 30px;
+}
+
+/* Event Title */
+#event-title {
+  margin-top: 100px;
+  /* margin-left:50px; */
+  color: #ffffff;
+  font-weight: 400;
+  /* font-size: 30px; */
+  text-align: left;
+}
+#event-info {
+  color: #ffffff;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+/* Event Poster */
+#event-poster {
+  max-height:400px;
+  max-width:100%;
+  height:auto;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.wrap {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:flex-start;
+}
+#stream {
+
+}
+.button {
+  font-weight: 400;
+  font-size: 16.5px;
+  color: #0063FF;
+  background-color: #fff;
+  min-width: 175px;
+  margin: 10px 10px 10px 10px;
+  height: 45px;
+  border:none;
+  border-radius: 37.5px;
+  transition: all 0.2s ease 0s;
+  -moz-box-shadow:    0px 3px 0px 0.05px #FFCD00;
+  -webkit-box-shadow: 0px 3px 0px 0.05px #FFCD00;
+  box-shadow:         0px 3px 0px 0.05px #FFCD00;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #FFD52A;
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0px 3px 0px 0.05px #0063FF;
+}
+.button:active {
+  background-color: #333;
+}
+.button:focus {
+  outline:0;
+}
+
+.button img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+/* BUTTON TOGGLE CSS */
+
+.nowStreaming {
+  font-weight: 400;
+  font-size: 16.5px;
+  color: #fff;
+  background-color: rgb(58,150,96);
+  min-width: 175px;
+  margin: 10px 10px 10px 10px;
+  height: 45px;
+  border:none;
+  border-radius: 37.5px;
+  transition: all 0.2s ease 0s;
+  -moz-box-shadow:    0px 3px 0px 0.05px #ffffff;
+  -webkit-box-shadow: 0px 3px 0px 0.05px #ffffff;
+  box-shadow:         0px 3px 0px 0.05px #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+.nowStreaming:hover {
+  background-color: rgb(58,150,96);
+  /* transform: translateY(-2px); */
+  -webkit-box-shadow: 0px 3px 0px 0.05px #cfcfcf;
+}
+.nowStreaming:active {
+  background-color: #333;
+}
+.nowStreaming:focus {
+  outline:0;
+}
+.stopStreaming {
+  font-weight: 400;
+  font-size: 16.5px;
+  color: rgb(254,0,11);
+  background-color: #fff;
+  min-width: 175px;
+  margin: 10px 10px 10px 10px;
+  height: 45px;
+  border:none;
+  border-radius: 37.5px;
+  transition: all 0.2s ease 0s;
+  -moz-box-shadow:    0px 3px 0px 0.05px rgb(254,0,11);
+  -webkit-box-shadow: 0px 3px 0px 0.05px rgb(254,0,11);
+  box-shadow:         0px 3px 0px 0.05px rgb(254,0,11);
+  cursor: pointer;
+  outline: none;
+}
+.stopStreaming:hover {
+  background-color: rgb(254,0,11);
+  color: #fff;
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0px 3px 0px 0.05px #ffffff;
+}
+.stopStreaming:active {
+  background-color: #333;
+}
+.stopStreaming:focus {
+  outline:0;
+}
+
+
+/* MEDIA QUERIES */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  h1 {
+    text-align: center !important;
+  }
+  #event-poster {
+    max-height: 50vh !important ;
+  }
+
+  #tag {
+    right:50px;
+  }
+
+  #logo {
+    left:50px;
+  }
+
+  .wrap {
+    margin-top: 30px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  button {
+    width:60% !important;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+  #event-title {
+    font-size: 2em !important;
+    font-weight: 400;
+  }
+
+  #event-info {
+    display: none;
+  }
+
+  .wrap {
+    /* margin-top: 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-start;
+  }
+
+  button {
+    width:80%;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #event-poster {
+    max-height: 350px;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* // Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width */
