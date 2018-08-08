@@ -174,33 +174,48 @@ body {
 .nowStreaming:focus {
   outline:0;
 }
-.stopStreaming {
+.nowStreaming img {
+  width: 20px;
+  margin-right: 5px;
+  fill: #ffffff;
+}
+.button-icon {
+  /* background-color: #ffffff; */
+  width: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.stream-icon .cls-1 {
+  fill:none;
+}
+
+/* Translating Button CSS */
+.nowTranslating {
   font-weight: 400;
   font-size: 16.5px;
-  color: rgb(254,0,11);
-  background-color: #fff;
+  color: #fff;
+  background-color: rgb(58,150,96);
   min-width: 175px;
   margin: 10px 10px 10px 10px;
   height: 45px;
   border:none;
   border-radius: 37.5px;
   transition: all 0.2s ease 0s;
-  -moz-box-shadow:    0px 3px 0px 0.05px rgb(254,0,11);
-  -webkit-box-shadow: 0px 3px 0px 0.05px rgb(254,0,11);
-  box-shadow:         0px 3px 0px 0.05px rgb(254,0,11);
+  -moz-box-shadow:    0px 3px 0px 0.05px #ffffff;
+  -webkit-box-shadow: 0px 3px 0px 0.05px #ffffff;
+  box-shadow:         0px 3px 0px 0.05px #ffffff;
   cursor: pointer;
   outline: none;
 }
-.stopStreaming:hover {
-  background-color: rgb(254,0,11);
-  color: #fff;
-  transform: translateY(-2px);
-  -webkit-box-shadow: 0px 3px 0px 0.05px #ffffff;
+.nowTranslating:hover {
+  background-color: rgb(58,150,96);
+  /* transform: translateY(-2px); */
+  -webkit-box-shadow: 0px 3px 0px 0.05px #cfcfcf;
 }
-.stopStreaming:active {
+.nowTranslating:active {
   background-color: #333;
 }
-.stopStreaming:focus {
+.nowTranslating:focus {
   outline:0;
 }
 
@@ -231,7 +246,7 @@ body {
   }
 
   .wrap {
-    margin-top: 30px !important;
+    margin-top: 10px !important;
     display: flex;
     flex-direction: column;
     align-items: center;

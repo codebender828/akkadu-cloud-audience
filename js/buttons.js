@@ -1,29 +1,50 @@
 let streamStatus = false;
+let translateStatus = false;
 
 var streamButton = document.getElementById("stream");
 var translateButton = document.getElementById("translate");
 
-  function stopStream() {
-    if (streamStatus == true) {
-      streamButton.innerHTML = "Stream";
-      streamButton.className = "button";
-      streamButton.disabled = false;
-      translateButton.innerHTML = "Translate";
-      translateButton.className = "button";
-
-      streamStatus = false;
-    }
-  }
-
   function startStream() {
+    if(translateStatus) {
+      stopTranslate();
+    }
     if (streamStatus == false) {
-      streamButton.innerHTML = "Now Streaming";
       streamButton.className = "nowStreaming";
-      streamButton.disabled = true;
-      translateButton.innerHTML = "Stop";
-      translateButton.className = "stopStreaming";
       streamStatus = true;
+
+
     } else {
       stopStream();
+    }
+  };
+
+  function stopStream() {
+    if (streamStatus == true) {
+      streamButton.className = "button";
+      streamStatus = false;
+
+    } else {
+      startStream();
+    }
+  };
+
+  function startTranslate() {
+    if (streamStatus) {
+      stopStream();
+    }
+    if (translateStatus == false) {
+      translateButton.className = "nowTranslating";
+      translateStatus = true;
+    } else {
+      stopTranslate();
+    }
+  };
+
+  function stopTranslate() {
+    if (translateStatus == true) {
+      translateButton.className = "button";
+      translateStatus = false;
+    } else {
+      startTranslate();
     }
   };
