@@ -8,11 +8,9 @@ var translateButton = document.getElementById("translate");
     if(translateStatus) {
       stopTranslate();
     }
-    if (streamStatus == false) {
+    if (!streamStatus) {
       streamButton.className = "nowStreaming";
       streamStatus = true;
-
-
     } else {
       stopStream();
     }
@@ -22,7 +20,6 @@ var translateButton = document.getElementById("translate");
     if (streamStatus == true) {
       streamButton.className = "button";
       streamStatus = false;
-
     } else {
       startStream();
     }
@@ -32,7 +29,7 @@ var translateButton = document.getElementById("translate");
     if (streamStatus) {
       stopStream();
     }
-    if (translateStatus == false) {
+    if (!translateStatus) {
       translateButton.className = "nowTranslating";
       translateStatus = true;
     } else {
@@ -48,3 +45,24 @@ var translateButton = document.getElementById("translate");
       startTranslate();
     }
   };
+
+  var streamStatus = !1,
+      translateStatus = !1,
+      streamButton = document.getElementById("stream"),
+      translateButton = document.getElementById("translate");
+
+  function startStream() {
+      translateStatus && stopTranslate(), streamStatus ? stopStream() : (streamButton.className = "nowStreaming", streamStatus = !0)
+  }
+
+  function stopStream() {
+      1 == streamStatus ? (streamButton.className = "button", streamStatus = !1) : startStream()
+  }
+
+  function startTranslate() {
+      streamStatus && stopStream(), 0 == translateStatus ? (translateButton.className = "nowTranslating", translateStatus = !0) : stopTranslate()
+  }
+
+  function stopTranslate() {
+      1 == translateStatus ? (translateButton.className = "button", translateStatus = !1) : startTranslate()
+  }
