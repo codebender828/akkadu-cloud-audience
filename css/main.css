@@ -213,6 +213,10 @@ body {
   h1 {
     text-align: center !important;
   }
+  #event-title {
+    margin-top: 100px;
+    font-size: 1.8em;
+  }
   #event-poster {
     max-height: 45vh !important ;
   }
@@ -223,6 +227,7 @@ body {
 
   #logo {
     left:50px;
+    width:100px;
   }
 
   .wrap {
@@ -242,12 +247,21 @@ body {
 @media (max-width: 767.98px) {
 
   #event-title {
-    font-size: 2em !important;
+    margin-top:70px;
+    font-size: 1.8em !important;
     font-weight: 400;
+  }
+
+  #event-poster {
+    height: 60vh;
   }
 
   #event-info {
     display: none;
+  }
+
+  .stage {
+    margin-top: 15px;
   }
 
   .wrap {
